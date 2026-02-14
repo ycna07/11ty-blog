@@ -118,6 +118,52 @@ main,
 footer {
 	padding: 1rem;
 }
+.site-footer {
+	position:fixed;
+	bottom:0;
+  padding: 1rem 0;
+  font-size: 0.5em;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* 小屏时允许换行 */
+  gap: 0.5rem;
+}
+
+/* 居中区域：合并两行 small 为一行（用 span 分隔） */
+.copyright-center {
+  text-align: center;
+  white-space: nowrap;
+}
+
+.copyright-center small {
+  display: inline;
+}
+
+.copyright-center small:not(:last-child)::after {
+  margin: 0 0.3rem;
+}
+
+/* 右侧靠右 */
+.built-with {
+  white-space: nowrap;
+}
+
+/* 响应式：小屏幕下堆叠显示 */
+@media (max-width: 600px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .copyright-center,
+  .built-with {
+    white-space: normal;
+  }
+}
 main :first-child {
 	margin-top: 0;
 }

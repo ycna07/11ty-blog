@@ -62,10 +62,33 @@
 			</heading-anchors>
 		</main>
 
-		<footer>
-			<p>
-				<em>Built with <a href="https://www.11ty.dev/">{{ eleventy.generator }}</a></em>
-			</p>
+		<footer class="site-footer">
+
+  		<div class="footer-content">
+
+				<div class="copyright-center">
+
+    			<small>
+					© 2024-{{ page.date.getFullYear()  }}
+      		<a href="{{metadata.author.url}}" rel="author">{{metadata.author.name}}</a>
+      			保留所有权利。
+    			</small>
+
+    			<small>
+      			本站内容采用
+      			<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">
+        			CC BY-NC-SA 4.0
+      			</a>
+      			许可协议。
+    			</small>
+
+  			</div>
+
+				<div class="built-with">
+					<i>Built with <a href="https://www.11ty.dev/">{{ eleventy.generator }}</a></i>
+				</div>
+
+			</div>
 		</footer>
 
 		<!-- This page `{{ page.url }}` was built on {% currentBuildDate %} -->
