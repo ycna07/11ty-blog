@@ -14,7 +14,7 @@ export default async function(eleventyConfig) {
 			data.title = `${data.title} (draft)`;
 		}
 
-		if(data.draft && process.env.ELEVENTY_RUN_MODE === "build") {
+		if (data.draft && process.env.ELEVENTY_RUN_MODE === "build") {
 			return false;
 		}
 	});
@@ -75,12 +75,12 @@ export default async function(eleventyConfig) {
 			limit: 10,
 		},
 		metadata: {
-			language: "en",
-			title: "Blog Title",
-			subtitle: "This is a longer description about your blog.",
-			base: "https://example.com/",
+			language: "zh-CN",
+			title: "ycna07`s Blog",
+			subtitle: "Please don't say \"You are lazy\" だって本当はcrazy",
+			base: "https://ycna07.github.io/",
 			author: {
-				name: "Your Name"
+				name: "ycna07"
 			}
 		}
 	});
